@@ -1,0 +1,79 @@
+a.navbar-brand {
+    font-family: "Jura", sans-serif;
+}
+
+form.d-flex {
+    font-family: "Jura", sans-serif;
+}
+
+ul.navbar-nav {
+    font-family: "Jura", sans-serif;
+}
+
+div.register {
+    font-family: "Jura", sans-serif;
+}
+
+div.edit-delete-btn {
+    font-family: "Jura", sans-serif;
+}
+
+h1.register {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.update {
+    font-family: "Jura", sans-serif;
+}
+
+h1.update {
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type=text], select {
+    width: 100%;
+    border: 2px solid #60c5a6;
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=number] {
+    width: 100%;
+    border: 2px solid #60c5a6;
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=url] {
+    width: 100%;
+    border: 2px solid #60c5a6;
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+

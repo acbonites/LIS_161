@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class = "movies"> {{ genre }} Films </h1>
+<p class = "movies"> Browse through the list of {{ genre }} films to see what fits your movie preference! </p>
+<ul class = "movies">
+    <li style = "--accent-color:#4CAF50">
+        <div class = "icon"><i class = "fa-sharp fa-solid fa-bags-shopping"></i></div>
+        <div class = "title"> GREENHILLS </div>
+        </li>
+    
+    {% for film in films %}
+    <li style = "--accent-color:#4CAF50">
+    <div class = "icon"><i class="fa-sharp fa-solid fa-mobile"></i></div>
+    <a class = "title" href = "/movies/{{ film.id }}">{{ film.title }}</a>
+    </li>
+    {% endfor %}
+
+    <li style = "--accent-color:#4CAF50">
+        <div class = "icon"><i class = "fa-sharp fa-solid fa-bags-shopping"></i></div>
+        <div class = "title"> GREENHILLS </div>
+        </li>
+</ul>
+
+{% endblock %}

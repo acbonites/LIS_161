@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class = "film"> {{ film.name }} </h1>
+<img src = "{{ film.url }}">
+<ul class = "film">
+    <li class="card" style="--color: black; --bg-color:#FF6663">
+        <div class="title"> Director </div>
+        <div class="content"> {{ film.director }} </div>
+	</li>
+
+    <li class="card" style="--color: black; --bg-color:#FF6663">
+        <div class="title"> Cast </div>
+        <div class="content"> {{ film.cast }} </div>
+	</li>
+
+    <li class="card" style="--color:black; --bg-color:#FEB144">
+        <div class="title"> Genre </div>
+        <div class="content"> {{ film.genre }} </div>
+    </li>
+
+    <li class="card" style="--color:black; --bg-color:#FEB144">
+        <div class="title"> Rating </div>
+        <div class="content"> {{ film.rating }} </div>
+    </li>
+
+    <li class="card" style="--color:black; --bg-color:#FEB144">
+        <div class="title"> Summary </div>
+        <div class="content"> {{ film.summary }} </div>
+    </li>
+
+</ul>
+
+    <form class = "film" action = "{{ url_for('modify') }}" method = "post">
+        <input type="hidden" name="film_id" value="{{ film.id }}">
+        <input type="submit" name="modify" value="EDIT"></input>
+        <input type="submit" name="modify" value="DELETE"></input>
+    </form>
+
+{% endblock %}

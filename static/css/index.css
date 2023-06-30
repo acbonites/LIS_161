@@ -1,0 +1,102 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("https://images2.imgbox.com/41/9c/7qd4DgQE_o.png");
+  height: 100%;
+  background-position: relative;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1.index {
+  font-family: "Monsterrat", sans-serif;
+  text-align: center;
+}
+
+p.index {
+  font-family: "Jura", sans-serif;
+  text-align: center;
+}
+
+ul.index {
+  --col-gap: 2rem;
+  --barH: 1rem;
+  --roleH: 2rem;
+  --flapH: 2rem;
+
+  width: min(60rem, 90%);
+  margin-inline: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--col-gap);
+  padding-inline: calc(var(--col-gap) / 2);
+
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+
+  font-family: "Jura", sans-serif;
+}
+ul.index li {
+  width: 10em;
+  display: grid;
+  grid-template:
+    "role"
+    "icon"
+    "title"
+    "descr";
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block-end: calc(var(--flapH) + 1rem);
+  text-align: center;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6) var(--roleH),
+    rgba(0, 0, 0, 0.4) calc(var(--roleH) + 0.5rem),
+    rgba(0, 0, 0, 0) calc(var(--roleH) + 0.5rem + 5rem)
+  );
+  clip-path: polygon(
+    calc(var(--col-gap) / -2 - 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px ) calc(100% - var(--flapH)),
+    50% 100%,
+    calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
+  );
+}
+
+ul.index li .icon {
+  font-size: 3rem;
+}
+ul.index li .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+ul.index li .descr {
+  font-size: 0.9rem;
+}
+
+div.title-index {
+  font-family: "Jura", sans-serif;
+  color: white;
+  font-weight: bold;
+}

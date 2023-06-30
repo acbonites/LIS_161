@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "update">
+
+    <h1 class = "update"> EDIT ELEMENTS </h1>
+    
+    <form action = "{{ url_for('update') }}" method = "post">
+        <input type = "hidden" name = "film_id" value = "{{ film.id }}">
+        
+        <label for = "title"> Title: </label>
+        <input type = "text" name = "film_title" id = "title" value = "{{ film.title }}" required>
+        
+        <br><br>
+        
+        <label for = "director"> Director: </label>
+        <input type = "text" name = "film_director" id = "director" value = "{{ film.director }}">
+        
+        <br><br>
+        
+        <label for = "cast"> Cast: </label>
+        <input type = "text" name = "film_cast" id = "cast" value = "{{ film.cast }}">
+        
+        <br><br>
+        
+        <label for = "genre"> Genre: </label>
+        <input type = "text" name = "film_genre" id = "genre" value = "{{ film.genre }}">
+        
+        <br><br>
+
+        <label for = "rating"> Rating: </label>
+        <input type = "number" name = "film_rating" id = "rating" value = "{{ film.rating }}">
+        
+        <label for = "summary"> Summary: </label>
+        <input type = "text" name = "film_summary" id = "summary" value = "{{ film.summary }}">
+        
+        <br><br>
+        
+        <input type = "submit" value = "Update!">
+    </form>
+
+</div>
+
+
+{% endblock %}
